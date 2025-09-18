@@ -35,3 +35,53 @@ Color mixing:
 
 000000 - FFFFFF
 0-0-0 - 255-255-255
+
+In computer rgb images are 3d array(Tensor) or Array of matrices.
+
+width(m), height(n), depth(3)
+
+Example:-
+
+[
+    [[1,2,3],[1,2,3],[1,2,3]...],
+    [[1,2,3],[1,2,3],[1,2,3]...],
+    [[1,2,3],[1,2,3],[1,2,3]...]
+    ...
+]
+
+In python output terminal mainly:- 
+
+[
+    [
+     [1,2,3],
+     [1,2,3],
+     [1,2,3]
+     ...
+    ],
+    [
+     [1,2,3],
+     [1,2,3],
+     [1,2,3]
+     ...
+    ],
+    [
+     [1,2,3],
+     [1,2,3],
+     [1,2,3]
+     ...
+    ]
+    ...
+]
+
+An RGB image in a computer is usually represented as a 3D array (tensor) with shape:
+
+(height,width,3)
+(height,width,3)
+
+Height (n): number of rows (vertical pixels)
+
+Width (m): number of columns (horizontal pixels)
+
+Depth (3): the color channels → Red, Green, Blue
+
+So each pixel is a 3-element vector [R, G, B].
