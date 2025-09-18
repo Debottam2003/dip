@@ -37,4 +37,5 @@ def show(matrix):
         print()
 
 show(b_matrix)
+print("---------------------------------------")
 show(w_matrix)
