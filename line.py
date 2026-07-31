@@ -1,0 +1,16 @@
+import cv2
+import numpy as np
+i = cv2.imread("lena.jpg")
+p1 = np.array([[-1,-1,-1],[2,2,2],[-1,-1,-1]])
+p2 = np.array([[-1,2,-1],[-1,2,-1],[-1,2,-1]])
+p3 = np.array([[2,-1,-1],[-1,2,-1],[-1,-1,2]])
+p4 = np.array([[-1,-1,2],[-1,2,-1],[2,-1,-1]])
+j1 = cv2.filter2D(i,-1,p1)
+j2 = cv2.filter2D(i,-1,p2)
+j3 = cv2.filter2D(i,-1,p3)
+j4 = cv2.filter2D(i,-1,p4)
+k1 = cv2.add(j1,j2)
+k2 = cv2.add(j3,j4)
+l = cv2.add(k1,k2)
+cv2.imshow("point",l)
+cv2.waitKey(0)

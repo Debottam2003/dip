@@ -1,0 +1,18 @@
+import cv2
+import numpy as np
+i1 = cv2.imread("OIP.jpg")
+i2 = cv2.imread("lena.jpg")
+i1=cv2.resize(i1,(500,500))
+i2=cv2.resize(i2,(500,500))
+i3 = cv2.subtract(i1,i2)
+i4 = cv2.add(i1,i2)
+i5 = cv2.multiply(i1,i2)
+i6 = cv2.divide(i1,i2)
+cv2.imwrite("subtract.jpg",i3)
+cv2.waitKey(0)
+cv2.imwrite("add.jpg",i4)
+cv2.waitKey(0)
+cv2.imwrite("mul.jpg",i5)
+cv2.waitKey(0)
+cv2.imwrite("div.jpg",i6)
+cv2.waitKey(0)

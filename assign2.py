@@ -1,0 +1,18 @@
+import cv2
+import numpy as np
+img = cv2.imread("lena.jpg")
+img1 = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
+_, rgb_to_binary = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY)
+_, gray_to_binary = cv2.threshold(img1, 128, 255, cv2.THRESH_BINARY)
+img2 = cv2.cvtColor(img,cv2.COLOR_RGB2YCrCb)
+img3 = cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+img4 = cv2.cvtColor(img,cv2.COLOR_HSV2RGB)
+img5 = cv2.cvtColor(img2,cv2.COLOR_YCrCb2RGB)
+cv2.imshow("rgb_to_gray.jpg",img1)
+cv2.imshow("gray_to_binary.jpg",gray_to_binary)
+cv2.imshow("rgb_to_binary.jpg",rgb_to_binary)
+cv2.imshow("rgb_to_hsv.jpg",img3)
+cv2.imshow("hsv_to_rgb.jpg",img4)
+cv2.imshow("ycbcr_to_rgb.jpg",img5)
+cv2.imshow("rgb_to_ycbcr.jpg",img2)
+cv2.waitKey(0)

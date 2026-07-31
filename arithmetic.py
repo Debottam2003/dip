@@ -1,0 +1,15 @@
+import cv2
+import numpy as np
+img1 = cv2.imread("lena.jpg")
+img2 = cv2.imread("download.jpg")
+img1 = cv2.resize(img1,(500,500))
+img2 = cv2.resize(img2,(500,500))
+add = cv2.add(img1,img2)
+sub = cv2.subtract(img1,img2)
+mul = cv2.multiply(img1,img2)
+div = cv2.divide(img1,img2)
+cv2.imshow("add",add)
+cv2.imshow("sub",sub)
+cv2.imshow("mul",mul)
+cv2.imshow("div",div)
+cv2.waitKey(0)
